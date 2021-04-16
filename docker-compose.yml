@@ -1,0 +1,16 @@
+version: '3'
+services:
+  flasknames:
+    build: . 
+    ports:
+     - "8000:8000"
+    environment:
+      REDIS_HOST: redis
+  redis:
+    image: "redis:6.2"
+    command:
+     - "redis-server"
+     - "--appendonly"
+     - "yes"
+    volumes:
+     - /root/project/data/:/data

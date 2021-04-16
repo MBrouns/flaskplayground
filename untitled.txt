@@ -1,0 +1,16 @@
+# Web API that allows for the following:
+
+- I want to be able push new names to the API
+  POST /names/matthijs -> 201
+
+- I also want to get existing names
+  GET /names/matthijs -> 200: hello matthijs
+  
+- I also want that getting a not previously added name returns a 404
+  GET /names/youness -> 404
+  
+- I also want to get all the names
+  GET /names -> [Matthijs]
+  
+  
+For now, it's fine if the server loses all data when it restarts
