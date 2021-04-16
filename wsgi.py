@@ -1,0 +1,1 @@
+from flaskplayground.app import app
